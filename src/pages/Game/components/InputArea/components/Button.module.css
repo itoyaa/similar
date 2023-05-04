@@ -1,0 +1,23 @@
+.btn,
+.btn:link,
+.btn:visited {
+    border: none;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: inherit;
+
+    border-radius: 20px;
+    padding: 16px 32px;
+    background-color: #0b7285;
+    color: #fff !important;
+    font-weight: 700;
+
+    transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #0c8599;
+}

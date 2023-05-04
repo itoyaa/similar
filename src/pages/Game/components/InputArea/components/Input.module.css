@@ -1,0 +1,19 @@
+.input {
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+    padding: 16px 24px;
+    color: #2c2c2c;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    color: #6f6f6f;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+}

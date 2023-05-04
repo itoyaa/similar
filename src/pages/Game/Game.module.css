@@ -1,0 +1,25 @@
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    font-family: "Noto Sans";
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.header {
+    font-family: Poppins, sans-serif;
+    font-size: 8.4rem;
+    color: white;
+    font-weight: 700;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    font-size: 40px;
+    right: 0;
+    top: 70px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}

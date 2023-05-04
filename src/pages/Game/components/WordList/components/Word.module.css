@@ -1,0 +1,42 @@
+.word {
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #2c2c2c;
+    text-align: left;
+    max-width: 90% !important;
+    min-width: 25% !important;
+}
+
+.longWord {
+    display: block;
+    overflow-x: auto;
+    padding: 8px 0;
+}
+
+.good {
+    background-color: #e3fafc;
+}
+
+.middle {
+    background-color: #c5f6fa;
+}
+
+.bad {
+    background-color: #99e9f2;
+}
+
+.wordContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.similarity {
+    font-family: "Noto Sans";
+    font-weight: 900;
+    font-size: 24px;
+    color: #ffffff;
+}
