@@ -1,12 +1,18 @@
 .optionBox {
-    padding: 16px 16px;
+    padding: 24px 16px;
     display: flex;
     flex-direction: column;
     gap: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.optionBox:hover {
+    transform: scale(1.05);
 }
 
 .optionBoxPic {
-    font-size: 60px;
+    font-size: 48px;
 }
 
 .optionBoxTitle {
