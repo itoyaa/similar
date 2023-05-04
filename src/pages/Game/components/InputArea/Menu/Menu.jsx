@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Menu.module.css";
-import { OptionBox } from "./components/OptionBox";
+import { OptionBox } from './components/OptionBox';
 
 const MENU_OPTIONS = [
     {
