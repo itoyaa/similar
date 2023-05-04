@@ -1,0 +1,15 @@
+.optionBox {
+    padding: 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.optionBoxPic {
+    font-size: 60px;
+}
+
+.optionBoxTitle {
+    font-size: 20px;
+    font-weight: 400;
+}

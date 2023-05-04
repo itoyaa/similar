@@ -16,5 +16,31 @@
     width: 90%;
     background-color: #fff;
     border-radius: 20px;
-    padding: 32px;
+    padding: 32px 48px;
+}
+
+.header {
+    font-family: Poppins, sans-serif;
+    font-size: 6.4rem;
+    color: #15AABF;
+    font-weight: 700;
+    position: relative;
+}
+
+.optionsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dark {
+    background-color: #99E9F2;
+}
+
+.mid {
+    background-color: #C5F6FA;
+}
+
+.light {
+    background-color: #E3FAFC;
 }
