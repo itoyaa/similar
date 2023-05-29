@@ -36,8 +36,6 @@ const MENU_OPTIONS = [
 ]
 
 export const Menu = (props) => {
-
-
     return (
         <>
             {props.isShown && (

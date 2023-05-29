@@ -1,8 +1,10 @@
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
+# from django.contrib.postgres.fields import ArrayField
 
 # есть фиксированное количество предобученных игр
 # каждой игре соотвествует таблица, созданная по модели Similarity
+
+
 class Similarity(models.Model):
     # слово, которое потенциально может ввести пользователь
     guess = models.CharField(max_length=40)
@@ -12,9 +14,9 @@ class Similarity(models.Model):
     anwser = models.CharField(max_length=40)
     # номер (идентификатор игры)
     game_num = models.IntegerField()
-  
-  
-# чтобы при обновлении ничего не терялось, 
+
+
+# чтобы при обновлении ничего не терялось,
 # будет хранить в БД сессии пользователей
 class Game(models.Model):
     # номер игры, в которую играл пользователь
@@ -24,6 +26,6 @@ class Game(models.Model):
     # токен игры
     token = models.CharField(max_length=50, default=None)
     # стейт игры
-    state = ArrayField(ArrayField(models.CharField(max_length=40)))
-    # время начала сессии 
+    # state = ArrayField(ArrayField(models.CharField(max_length=40)))
+    # время начала сессии
     time_create = models.DateTimeField(auto_now_add=True)

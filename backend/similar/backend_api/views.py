@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from .serializer import SimilaritySerializer
 from .models import Similarity
 
+
 class SimilarityView(APIView):
     def get(self, request):
         output = [
@@ -13,5 +14,6 @@ class SimilarityView(APIView):
                 'similarity': output.similarity,
                 'anwser': output.anwser,
                 'game_num': output.game_num,
-            }
+            } for output in Similarity.objects.all()
         ]
+        return Response(output)

@@ -1,7 +1,7 @@
 import React from "react";
 import { InputArea } from "./components/InputArea/InputArea";
 import { WordList } from "./components/WordList/WordList";
-import { Menu } from './components/InputArea/Menu/Menu';
+import { Menu } from './components/Menu/Menu';
 import styles from "./Game.module.css";
 
 const WORDS = [
