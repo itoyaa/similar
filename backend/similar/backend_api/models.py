@@ -11,9 +11,9 @@ class Similarity(models.Model):
     # число, характеризующее, насколько введденное слово похоже на загаданное
     similarity = models.IntegerField()
     # загаданное слово
-    anwser = models.CharField(max_length=40)
+    answer = models.CharField(max_length=40)  # кот
     # номер (идентификатор игры)
-    game_num = models.IntegerField()
+    game_num = models.IntegerField()  # 42
 
 
 # чтобы при обновлении ничего не терялось,
@@ -22,10 +22,10 @@ class Game(models.Model):
     # номер игры, в которую играл пользователь
     game_num = models.IntegerField(blank=True)
     # загаданное слово
-    anwser = models.CharField(max_length=40, blank=True)
+    answer = models.CharField(max_length=40, blank=True)
     # токен игры
     token = models.CharField(max_length=50, default=None)
     # стейт игры
-    # state = ArrayField(ArrayField(models.CharField(max_length=40)))
+    state = models.TextField(max_length=5000)
     # время начала сессии
     time_create = models.DateTimeField(auto_now_add=True)

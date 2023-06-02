@@ -6,14 +6,21 @@ import { Button } from "./components/Button";
 import styles from "./InputArea.module.css";
 
 export const InputArea = (props) => {
-    const [triesCounter, setTriesCounter] = React.useState(0);
     const [currentWord, setCurrentWord] = React.useState("");
     const [shake, setShake] = React.useState(false);
+
+    React.useEffect(() => {
+        if (props.shake) {
+            setShake(true);
+            setTimeout(() => {
+                setShake(false);
+            }, 1000);
+        }      
+    }, [props.shake]);
 
     const handleAdd = React.useCallback(() => {
         if (currentWord !== "") {
             props.onClick(currentWord);
-            setTriesCounter((prev) => prev + 1);
             setCurrentWord("");
         } else {
             setShake(true);
@@ -50,7 +57,7 @@ export const InputArea = (props) => {
                 />
                 <Button onClick={handleAdd}>Отправить</Button>
             </div>
-            <div className={styles.tries}>Предположения: {triesCounter}</div>
+            <div className={styles.tries}>Предположения: {props.triesCounter}</div>
         </div>
     );
 };

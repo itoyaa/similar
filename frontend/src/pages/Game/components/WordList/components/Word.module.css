@@ -9,6 +9,10 @@
     min-width: 25% !important;
 }
 
+.word::first-letter {
+    text-transform: capitalize;
+}
+
 .longWord {
     display: block;
     overflow-x: auto;

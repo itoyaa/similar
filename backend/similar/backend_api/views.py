@@ -3,17 +3,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from .serializer import SimilaritySerializer
-from .models import Similarity
+from .similarity import Similarity
 
 
 class SimilarityView(APIView):
     def get(self, request):
-        output = [
-            {
-                'guess': output.guess,
-                'similarity': output.similarity,
-                'anwser': output.anwser,
-                'game_num': output.game_num,
-            } for output in Similarity.objects.all()
-        ]
-        return Response(output)
+        game_num = request.GET.get('gameNum')
+        guess = request.GET.get('guess')
+        similarity = Similarity(int(game_num))
+        return Response([{
+            'similarity': similarity.guess_word(guess)
+        }])

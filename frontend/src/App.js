@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
 import { Welcome } from "./pages/Welcome/Welcome";
 import { Game } from "./pages/Game/Game";
@@ -10,7 +10,7 @@ function App() {
         <div className={styles.app}>
             <div>
                 <Route exact path="/" component={Welcome} />
-                <Route path="/game" component={Game} />
+                <Route path="/game/:id" component={Game} />
             </div>
         </div>
     );

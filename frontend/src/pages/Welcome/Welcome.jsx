@@ -13,7 +13,7 @@ export const Welcome = () => {
                     слово похоже на загаданное!&nbsp;😎
                 </p>
                 <Button>
-                    <Link to="/game" className={styles.link}>
+                    <Link to="/game/1" className={styles.link}>
                         Начать!
                     </Link>
                 </Button>

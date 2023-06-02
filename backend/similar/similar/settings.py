@@ -59,7 +59,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
     ]
 }
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'similar.urls'
