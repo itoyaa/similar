@@ -2,6 +2,7 @@ import React from "react";
 
 import { Input } from "./components/Input";
 import { Button } from "./components/Button";
+import { Word } from "../WordList/components/Word";
 
 import styles from "./InputArea.module.css";
 
@@ -57,7 +58,14 @@ export const InputArea = (props) => {
                 />
                 <Button onClick={handleAdd}>Отправить</Button>
             </div>
-            <div className={styles.tries}>Предположения: {props.triesCounter}</div>
+            {props.lastTry && (
+                <Word
+                    word={props.lastTry.word}
+                    similarity={props.lastTry.similarity}
+                    key={props.lastTry.word}
+                />
+            )}
+            {props.triesCounter > 0 && <div className={styles.tries}>Предположения: {props.triesCounter}</div>}
         </div>
     );
 };

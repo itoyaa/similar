@@ -3,7 +3,7 @@
     grid-template-columns: 1fr auto;
     gap: 5px;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .tries {
@@ -11,6 +11,7 @@
     font-weight: 800;
     font-size: 18px;
     color: #ffffff;
+    margin-top: 12px;
 }
 
 .shake {

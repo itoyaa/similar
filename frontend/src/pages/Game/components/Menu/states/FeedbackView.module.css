@@ -1,0 +1,31 @@
+.header {
+    font-family: Noto-Sans, sans-serif;
+    font-size: 4.8rem;
+    color: #15aabf;
+    font-weight: bold;
+    position: relative;
+    letter-spacing: -2px;
+}
+
+.feedbackBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #2c2c2c;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.link {
+    color: #15aabf;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.link:hover {
+    color: #006172;
+}

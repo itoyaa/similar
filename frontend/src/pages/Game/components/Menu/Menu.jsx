@@ -1,79 +1,49 @@
 import React from "react";
 import styles from "./Menu.module.css";
-import { OptionBox } from './components/OptionBox';
+import { OptionsView } from "./states/OptionsView";
+import { FeedbackView } from "./states/FeedbackView";
 
-const MENU_OPTIONS = [
-    {
-        pic: '😧',
-        title: 'Сдаться',
-        color: styles.dark
-    },
-    {
-        pic: '🤔',
-        title: 'Подсказка',
-        color: styles.mid
-    },
-    {
-        pic: '🤬',
-        title: 'Заново',
-        color: styles.light
-    },
-    {
-        pic: '🤯',
-        title: 'Как играть?',
-        color: styles.light
-    },
-    {
-        pic: '🤓',
-        title: 'Фидбек',
-        color: styles.dark
-    },
-    {
-        pic: '🥰️',
-        title: 'О нас',
-        color: styles.mid
-    },
-]
+const States = {
+    Default: 0,
+    GiveUp: 1,
+    Hint: 2,
+    StartOver: 3,
+    HowToPlay: 4,
+    Feedback: 5,
+    SelectGame: 6,
+}
 
 export const Menu = (props) => {
+    const [menuState, setMenuState] = React.useState(States.Default);
+
+    const onMenuClose = React.useCallback(() => {
+        props.handleCloseMenu();
+        setMenuState(States.Default);
+    }, [props]);
+
+    const handleBackToOptions = React.useCallback(() => {
+        setMenuState(States.Default);
+    }, []);
+
+
+
     return (
         <>
             {props.isShown && (
-                <div onClick={props.handleCloseMenu} className={styles.modal}>
+                <div className={styles.modal}>
                     <div className={styles.box}>
-                        <h2 className={styles.header}>Menu</h2>
-                        <div className={styles.optionsContainer}>
-                            <OptionBox
-                                title={MENU_OPTIONS[0].title}
-                                pic={MENU_OPTIONS[0].pic}
-                                color={MENU_OPTIONS[0].color}
-                            />
-                            <OptionBox
-                                title={MENU_OPTIONS[1].title}
-                                pic={MENU_OPTIONS[1].pic}
-                                color={MENU_OPTIONS[1].color}
-                            />
-                            <OptionBox
-                                title={MENU_OPTIONS[2].title}
-                                pic={MENU_OPTIONS[2].pic}
-                                color={MENU_OPTIONS[2].color}
-                            />
-                            <OptionBox
-                                title={MENU_OPTIONS[3].title}
-                                pic={MENU_OPTIONS[3].pic}
-                                color={MENU_OPTIONS[3].color}
-                            />
-                            <OptionBox
-                                title={MENU_OPTIONS[4].title}
-                                pic={MENU_OPTIONS[4].pic}
-                                color={MENU_OPTIONS[4].color}
-                            />
-                            <OptionBox
-                                title={MENU_OPTIONS[5].title}
-                                pic={MENU_OPTIONS[5].pic}
-                                color={MENU_OPTIONS[5].color}
-                            />
+                        {menuState !== States.Default && (
+                            <div className={`${styles.btn} ${styles.backBtn}`} onClick={handleBackToOptions}>
+                                <ion-icon name="return-up-back-outline"></ion-icon>
+                            </div>
+                        )}
+                        <div className={`${styles.btn} ${styles.closeBtn}`} onClick={onMenuClose}>
+                            <ion-icon name="close-outline"></ion-icon>
                         </div>
+
+                        
+                        {menuState === States.Default && <OptionsView onChangeState={setMenuState} header={'Menu'} />}
+                        {menuState === States.Feedback && <FeedbackView header={'Обратная связь'} backToOptions={handleBackToOptions}/>}
                     </div>
                 </div>
             )}

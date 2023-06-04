@@ -13,6 +13,7 @@ export const Game = () => {
     const [openMenu, setOpenMenu] = React.useState(false);
     const [answer, setAnswer] = React.useState(undefined);
     const [triesCounter, setTriesCounter] = React.useState(0);
+    const [lastTry, setLastTry] = React.useState(undefined);
 
     const handleOpenMenu = React.useCallback(() => {
         setOpenMenu(true);
@@ -37,18 +38,23 @@ export const Game = () => {
                             setShake(false);
                         }, 1000);
                     } else {
+                        const correntSimilarity = similarity === 1 ? similarity - 0.0001 : similarity;
                         setWordList((prev) => {
                             return [
                                 ...prev,
                                 {
                                     word: formatNewWord,
-                                    similarity: Math.round(similarity * 10000) / 100,
+                                    similarity: Math.round(correntSimilarity * 10000) / 100,
                                 },
                             ].sort((word1, word2) =>
                                 word1.similarity > word2.similarity ? -1 : 1
                             );
                         });
                         setTriesCounter(prev => prev += 1);
+                        setLastTry({
+                            word: formatNewWord,
+                            similarity: Math.round(correntSimilarity * 10000) / 100,
+                        });
                     }
                 })
             }
@@ -63,12 +69,11 @@ export const Game = () => {
                     Similar
                     <div className={styles.menu} onClick={handleOpenMenu}>
                         <ion-icon
-                            className={styles.star}
                             name="ellipsis-horizontal"
                         ></ion-icon>
                     </div>
                 </header>
-                <InputArea onClick={addNewWord} shake={shake} triesCounter={triesCounter} />
+                <InputArea onClick={addNewWord} shake={shake} triesCounter={triesCounter} lastTry={lastTry} />
                 <WordList wordList={wordList} />
                 <Menu isShown={openMenu} handleCloseMenu={handleCloseMenu} />
                 {answer && <Victory answer={answer} />}

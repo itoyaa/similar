@@ -12,36 +12,34 @@
 
 .box {
     min-width: 300px;
-    max-width: 750px;
+    max-width: 900px;
     width: 90%;
     background-color: #fff;
     border-radius: 20px;
     padding: 32px 64px 64px;
-}
-
-.header {
-    font-family: Poppins, sans-serif;
-    font-size: 6.4rem;
-    color: #15AABF;
-    font-weight: 700;
     position: relative;
 }
 
-.optionsContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 16px;
+.btn {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+    cursor: pointer;
+    color: #15aabf;
+    transition: all 0.3s;
 }
 
-.dark {
-    background-color: #99E9F2;
+.btn:hover {
+    color: #006172;
 }
 
-.mid {
-    background-color: #C5F6FA;
+.closeBtn {
+    right: 8px;
+    top: 6px;
 }
 
-.light {
-    background-color: #E3FAFC;
+.backBtn {
+    left: 16px;
+    top: 6px;
 }
