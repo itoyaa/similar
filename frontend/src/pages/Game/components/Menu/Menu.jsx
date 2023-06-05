@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Menu.module.css";
 import { OptionsView } from "./states/OptionsView";
 import { FeedbackView } from "./states/FeedbackView";
+import { HowToPlayView } from "./states/HowToPlayView";
 
 const States = {
     Default: 0,
@@ -43,7 +44,8 @@ export const Menu = (props) => {
 
                         
                         {menuState === States.Default && <OptionsView onChangeState={setMenuState} header={'Menu'} />}
-                        {menuState === States.Feedback && <FeedbackView header={'Обратная связь'} backToOptions={handleBackToOptions}/>}
+                        {menuState === States.Feedback && <FeedbackView header={'Фидбэк'} />}
+                        {menuState === States.HowToPlay && <HowToPlayView header={'Как играть?'} />}
                     </div>
                 </div>
             )}

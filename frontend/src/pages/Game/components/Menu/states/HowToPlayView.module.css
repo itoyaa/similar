@@ -6,7 +6,7 @@
     letter-spacing: -2px;
 }
 
-.feedbackBox {
+.howToPlayBox {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -18,13 +18,20 @@
     margin-top: 20px;
 }
 
-.link {
+.tipsHeader {
+    font-weight: 900;
     color: #15aabf;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s;
+    font-size: 2.8rem;
+    margin-bottom: 8px;
 }
 
-.link:hover {
-    color: #006172;
+.word {
+    color: #15aabf;
+    font-weight: 600;
+}
+
+.tipsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }

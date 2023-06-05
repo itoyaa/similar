@@ -25,7 +25,7 @@ const MENU_OPTIONS = [
     },
     {
         pic: '🤓',
-        title: 'Фидбек',
+        title: 'Фидбэк',
         color: styles.dark
     },
     {

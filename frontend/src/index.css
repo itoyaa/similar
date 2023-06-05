@@ -1,6 +1,17 @@
+@font-face {
+    font-family: "Golos Text";
+    src: local("Golos Text"),
+        url("../fonts/golos-text_regular.woff2") format("woff2"),
+        url("../fonts/golos-text_regular.woff") format("woff"),
+        url("../fonts/golos-ui_bold.ttf") format("truetype"),
+        url("../fonts/golos-ui_regular.ttf") format("truetype"),
+        url("../fonts/golos-ui_medium.ttf") format("truetype"),
+        url("../fonts/golos-ui_vf.ttf") format("truetype");
+}
+
 body {
     margin: 0;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Noto Sans", "Golos Text", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #15aabf;

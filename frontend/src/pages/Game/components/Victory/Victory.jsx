@@ -7,7 +7,8 @@ export const Victory = (props) => {
         const url = window.location.href;
         const arrayUrl = url.split('/');
         const nextGameNum = String(Number(arrayUrl[arrayUrl.length - 1]) + 1);
-        const nextUrl = url.slice(0, -1) + nextGameNum;
+        const lenOfGameNum = arrayUrl[arrayUrl.length - 1].length;
+        const nextUrl = url.slice(0, -lenOfGameNum) + nextGameNum;
         window.location.href = nextUrl;
     }, []);
 
