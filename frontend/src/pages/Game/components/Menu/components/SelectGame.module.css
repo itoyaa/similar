@@ -1,8 +1,22 @@
 .gamesContainer {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    max-height: 50vh;
+    height: 44vh;
+    max-height: 100%;
     overflow-y: scroll;
     justify-content: space-between;
     gap: 8px;
+}
+
+.randomBtn {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+.link,
+.link:hover,
+.link:active,
+.link:visited {
+    text-decoration: none;
+    color: #fff;
 }

@@ -1,4 +1,4 @@
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 
 import { Welcome } from "./pages/Welcome/Welcome";
 import { Game } from "./pages/Game/Game";
@@ -9,8 +9,30 @@ function App() {
     return (
         <div className={styles.app}>
             <div>
-                <Route exact path="/" component={Welcome} />
-                <Route path="/game/:id" component={Game} />
+                <Switch>
+                    <Route exact path="/" component={Welcome} />
+                    <Route
+                        exact
+                        path="/game/"
+                        render={() => <Redirect to="/game/1" />}
+                    />
+                    <Route
+                        path="/game/:id"
+                        render={({ match, location }) => {
+                            const id = match.params.id;
+                            const isNumber = /^\d+$/.test(id);
+                            if (!isNumber) {
+                                return <Redirect to="/" />;
+                            }
+                            const { pathname } = location;
+                            if (pathname.split("/").length > 3) {
+                                return <Redirect to={`/game/${id}`} />;
+                            }
+                            return <Game id={parseInt(id)} />;
+                        }}
+                    />
+                    <Route render={() => <Redirect to="/" />} />
+                </Switch>
             </div>
         </div>
     );

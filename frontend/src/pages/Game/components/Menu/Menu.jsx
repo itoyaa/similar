@@ -17,18 +17,18 @@ const States = {
     HowToPlay: 4,
     Feedback: 5,
     SelectGame: 6,
-}
+};
 
 const CONFIRM_TEXTS = {
     1: {
-        title: 'Хочешь сдаться?',
-        text: 'Мы покажем загаданное слово.',
+        title: "Хочешь сдаться?",
+        text: "Мы покажем загаданное слово.",
     },
     3: {
-        title: 'Начинаем сначала?',
-        text: 'Все предположения будут сброшены.',
-    }
-}
+        title: "Начинаем сначала?",
+        text: "Все предположения будут сброшены.",
+    },
+};
 
 export const Menu = (props) => {
     const [menuState, setMenuState] = React.useState(States.Default);
@@ -49,50 +49,83 @@ export const Menu = (props) => {
     }, []);
 
     React.useEffect(() => {
-        if (menuState === States.GiveUp) {
-            setShowConfirm(true);
-        }
-        if (menuState === States.StartOver) {
+        if (menuState === States.GiveUp || menuState === States.StartOver) {
             setShowConfirm(true);
         }
     }, [menuState]);
 
+    const handleConfirm = React.useCallback(() => {
+        setShowConfirm(false);
 
+        if (menuState === States.GiveUp) {
+            onMenuClose();
+            props.handleGiveUp();
+        } else if (menuState === States.StartOver) {
+            props.setOpenVictory(false);
+            onMenuClose();
+            props.handleInit();
+        }
+    }, [menuState, onMenuClose, props]);
 
     return (
         <>
             {props.isShown && (
                 <div className={styles.modal}>
-                    {!showConfirm && 
+                    {!showConfirm && (
                         <div className={styles.box}>
                             {menuState !== States.Default && (
-                                <div className={`${styles.btn} ${styles.backBtn}`} onClick={handleBackToOptions}>
+                                <div
+                                    className={`${styles.btn} ${styles.backBtn}`}
+                                    onClick={handleBackToOptions}
+                                >
                                     <ion-icon name="return-up-back-outline"></ion-icon>
                                 </div>
                             )}
-                            <div className={`${styles.btn} ${styles.closeBtn}`} onClick={onMenuClose}>
+                            <div
+                                className={`${styles.btn} ${styles.closeBtn}`}
+                                onClick={onMenuClose}
+                            >
                                 <ion-icon name="close-outline"></ion-icon>
                             </div>
 
-                            
-                            {menuState === States.Default && <OptionsView onChangeState={setMenuState} header={'Menu'} />}
-                            {menuState === States.Feedback && <FeedbackView header={'Фидбэк'} />}
-                            {menuState === States.HowToPlay && <HowToPlayView header={'Как играть?'} />}
-                            {menuState === States.SelectGame && <SelectGameView header={'Выбрать игру'} onMenuClose={onMenuClose} />}
-                            {menuState === States.Hint && <HintView header={'Подсказка'} onMenuClose={onMenuClose} />}
+                            {menuState === States.Default && (
+                                <OptionsView
+                                    onChangeState={setMenuState}
+                                    header={"Меню"}
+                                />
+                            )}
+                            {menuState === States.Feedback && (
+                                <FeedbackView header={"Фидбэк"} />
+                            )}
+                            {menuState === States.HowToPlay && (
+                                <HowToPlayView header={"Как играть?"} />
+                            )}
+                            {menuState === States.SelectGame && (
+                                <SelectGameView
+                                    header={"Выбрать игру"}
+                                    onMenuClose={onMenuClose}
+                                    handleInit={props.handleInit}
+                                />
+                            )}
+                            {menuState === States.Hint && (
+                                <HintView
+                                    header={"Подсказка"}
+                                    onMenuClose={onMenuClose}
+                                />
+                            )}
                         </div>
-                    }
+                    )}
 
-                    {showConfirm && 
+                    {showConfirm && (
                         <Confirm
-                            onConfirm={console.log('confirm')} 
-                            onCancel={handleCancel} 
-                            title={CONFIRM_TEXTS[menuState].title} 
+                            onConfirm={handleConfirm}
+                            onCancel={handleCancel}
+                            title={CONFIRM_TEXTS[menuState].title}
                             text={CONFIRM_TEXTS[menuState].text}
                         />
-                    }
+                    )}
                 </div>
             )}
         </>
     );
-}
+};

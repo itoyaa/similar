@@ -22,4 +22,18 @@
     top: 70px;
     transform: translate(0, -50%);
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu:hover {
+    color: #0b7285;
+}
+
+.num {
+    position: absolute;
+    font-size: 40px;
+    left: 0;
+    top: 70px;
+    transform: translate(0, -50%);
+    cursor: pointer;
 }

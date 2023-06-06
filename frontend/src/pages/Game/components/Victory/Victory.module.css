@@ -17,12 +17,16 @@
     background-color: #fff;
     border-radius: 20px;
     padding: 32px 64px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .header {
     font-family: Poppins, sans-serif;
     font-size: 4.2rem;
-    color: #15AABF;
+    color: #15aabf;
     font-weight: 700;
     position: relative;
     line-height: 1;
@@ -34,11 +38,62 @@
 }
 
 .desc {
-    font-size: 2.0rem;
-    margin-bottom: 24px;
+    font-size: 2.4rem;
+    margin-bottom: 8px;
 }
 
 .ans {
-    color: #15AABF;
+    color: #15aabf;
     font-weight: 700;
+}
+
+.results {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    font-size: 1.6rem;
+}
+
+.tries {
+    color: #15aabf;
+    font-weight: 900;
+}
+
+.hints {
+    color: #f03e3e;
+    font-weight: 900;
+}
+
+.none {
+    display: none;
+}
+
+.btn {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+    cursor: pointer;
+    color: #15aabf;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    color: #006172;
+}
+
+.closeBtn {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+    cursor: pointer;
+    color: #15aabf;
+    transition: all 0.3s;
+    right: 8px;
+    top: 6px;
+}
+
+.closeBtn:hover {
+    color: #006172;
 }

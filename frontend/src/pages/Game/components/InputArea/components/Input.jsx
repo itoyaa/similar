@@ -11,6 +11,7 @@ export const Input = (props) => {
                 props.onChange(event.target.value);
             }}
             placeholder="Введите слово"
+            disabled={props.disabled}
         />
     );
 };

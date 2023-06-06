@@ -21,5 +21,7 @@ from backend_api.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', SimilarityView.as_view(), name='similarity')
+    path('similarity/', SimilarityView.as_view(), name='similarity'),
+    path('hint/', HintView.as_view(), name='hint'),
+    path('answer/', AnswerView.as_view(), name='answer'),
 ]
