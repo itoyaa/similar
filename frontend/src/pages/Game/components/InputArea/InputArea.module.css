@@ -8,10 +8,14 @@
 
 .tries {
     text-align: left;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 18px;
     color: #ffffff;
     margin-top: 12px;
+}
+
+.extraBold {
+    font-weight: 900;
 }
 
 .shake {

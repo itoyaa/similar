@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../InputArea/components/Button";
+import { DarkButton } from "../../../../components/DarkButton";
 import styles from "./Victory.module.css";
 
 export const Victory = (props) => {
@@ -21,7 +21,7 @@ export const Victory = (props) => {
                     <p className={styles.desc}>Загаданное слово -
                         <span className={styles.ans}> {props.answer}</span>
                     </p>
-                    <Button onClick={goToNextGame}>Следующая игра</Button>
+                    <DarkButton onClick={goToNextGame}>Следующая игра</DarkButton>
                 </div>
             </div>
         </>

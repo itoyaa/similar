@@ -1,0 +1,39 @@
+.header {
+    font-size: 4.8rem;
+    color: #15aabf;
+    font-weight: 900;
+    position: relative;
+    letter-spacing: -2px;
+}
+
+.hintContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #2c2c2c;
+    text-align: left;
+}
+
+.hint {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.generate {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+.hintWord {
+    color: #0b7285;
+    font-weight: 800;
+}
+
+.hintWord::first-letter {
+    text-transform: capitalize;
+}

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "./components/Button";
+import { LightButton } from "../../components/LightButton";
 import styles from "./Welcome.module.css";
 
 export const Welcome = () => {
@@ -18,11 +18,11 @@ export const Welcome = () => {
                         часто слова встречаются в одном контексте. Например, антонимы могут располагаться близко друг к другу, так как одно слово легко заменить другим в одном предложении.
                     </p>
                 </div>
-                <Button>
+                <LightButton>
                     <Link to="/game/1" className={styles.link}>
                         Начать!
                     </Link>
-                </Button>
+                </LightButton>
             </div>
         </>
     );

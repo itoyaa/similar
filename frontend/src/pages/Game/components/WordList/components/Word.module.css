@@ -17,18 +17,6 @@
     padding: 8px 0;
 }
 
-.good {
-    background-color: #e3fafc;
-}
-
-.middle {
-    background-color: #c5f6fa;
-}
-
-.bad {
-    background-color: #99e9f2;
-}
-
 .container {
     display: flex;
     flex-direction: row;

@@ -1,0 +1,36 @@
+.box {
+    min-width: 300px;
+    max-width: 480px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 64px;
+    position: relative;
+}
+
+.title {
+    font-weight: 900;
+    color: #15aabf;
+    font-size: 2.8rem;
+    margin-bottom: 8px;
+}
+
+.text {
+    gap: 16px;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #2c2c2c;
+    margin-bottom: 24px;
+}
+
+.btnContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Input } from "./components/Input";
-import { Button } from "./components/Button";
+import { DarkButton } from "../../../../components/DarkButton";
 import { Word } from "../WordList/components/Word";
 
 import styles from "./InputArea.module.css";
@@ -56,7 +56,7 @@ export const InputArea = (props) => {
                     onKeyDown={handleAddOnEnterPress}
                     className={shake ? styles.shake : ""}
                 />
-                <Button onClick={handleAdd}>Отправить</Button>
+                <DarkButton onClick={handleAdd}>Отправить</DarkButton>
             </div>
             {props.lastTry && (
                 <Word
@@ -65,7 +65,9 @@ export const InputArea = (props) => {
                     key={props.lastTry.word}
                 />
             )}
-            {props.triesCounter > 0 && <div className={styles.tries}>Предположения: {props.triesCounter}</div>}
+            {props.triesCounter > 0 && <div className={styles.tries}>Предположения: 
+                <span className={styles.extraBold}> {props.triesCounter}</span>
+            </div>}
         </div>
     );
 };

@@ -1,0 +1,16 @@
+.game {
+    display: inline-block;
+    background-color: #4abdcd;
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.5s;
+}
+
+.game:hover {
+    background-color: #368c97;
+}
