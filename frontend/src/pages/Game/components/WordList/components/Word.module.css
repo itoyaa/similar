@@ -1,8 +1,8 @@
 .word {
-    padding: 4px 20px;
+    padding: 0.4rem 2rem;
     border-radius: 20px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #2c2c2c;
     text-align: left;
 }
@@ -14,13 +14,13 @@
 .longWord {
     display: block;
     overflow-x: auto;
-    padding: 8px 0;
+    padding: 0.8rem 0;
 }
 
 .container {
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 0.8rem;
     align-items: center;
 }
 
@@ -31,6 +31,6 @@
 .similarity {
     font-family: "Noto Sans";
     font-weight: 900;
-    font-size: 24px;
+    font-size: 2.4rem;
     color: #ffffff;
 }

@@ -28,7 +28,7 @@ export const Word = (props) => {
         <div className={styles.container}>
             <div
                 className={`${styles.word}`}
-                style={{ minWidth: wordWidth, backgroundColor: wordColor }}
+                style={{ width: wordWidth, backgroundColor: wordColor }}
             >
                 <span className={styles.longWord}>{props.word}</span>
             </div>

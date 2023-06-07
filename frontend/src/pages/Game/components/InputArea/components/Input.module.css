@@ -3,8 +3,8 @@
     border: none;
     border-radius: 18px;
     font-family: "Noto Sans", sans-serif;
-    font-size: 20px;
-    padding: 16px 24px;
+    font-size: 2rem;
+    padding: 1.6rem 2.4rem;
     color: #2c2c2c;
 }
 
@@ -15,7 +15,7 @@
 .input::placeholder {
     color: #6f6f6f;
     font-family: "Noto Sans", sans-serif;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .input:disabled {

@@ -1,5 +1,5 @@
 .container {
-    max-width: 750px;
+    max-width: 75rem;
     margin: 0 auto;
     font-family: "Noto Sans";
     display: flex;
@@ -17,9 +17,9 @@
 
 .menu {
     position: absolute;
-    font-size: 40px;
+    font-size: 4rem;
     right: 0;
-    top: 70px;
+    top: 7rem;
     transform: translate(0, -50%);
     cursor: pointer;
     transition: all 0.3s;
@@ -31,9 +31,14 @@
 
 .num {
     position: absolute;
-    font-size: 40px;
+    font-size: 4rem;
     left: 0;
-    top: 70px;
+    top: 7rem;
     transform: translate(0, -50%);
-    cursor: pointer;
+}
+
+@media screen and (max-width: 420px) {
+    .num {
+        display: none;
+    }
 }

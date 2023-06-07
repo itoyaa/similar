@@ -1,9 +1,9 @@
 .game {
     display: inline-block;
     background-color: #4abdcd;
-    padding: 8px;
+    padding: 0.8rem;
     color: white;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 900;
     cursor: pointer;
     text-decoration: none;

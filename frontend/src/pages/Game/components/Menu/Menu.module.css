@@ -11,20 +11,22 @@
 }
 
 .box {
-    min-width: 300px;
-    max-width: 900px;
+    min-width: 30rem;
+    max-width: 90rem;
+    max-height: 95vh;
+    overflow-y: scroll;
     width: 90%;
     background-color: #fff;
     border-radius: 20px;
-    padding: 32px 64px 48px;
+    padding: 3.2rem 6.4rem 4.8rem;
     position: relative;
 }
 
 .btn {
     position: absolute;
-    width: 48px;
-    height: 48px;
-    font-size: 48px;
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: 4.8rem;
     cursor: pointer;
     color: #15aabf;
     transition: all 0.3s;
@@ -35,11 +37,11 @@
 }
 
 .closeBtn {
-    right: 8px;
-    top: 6px;
+    right: 0.8rem;
+    top: 0.6rem;
 }
 
 .backBtn {
-    left: 16px;
-    top: 6px;
+    left: 1.6rem;
+    top: 0.6rem;
 }

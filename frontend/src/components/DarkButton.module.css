@@ -2,14 +2,14 @@
 .btn:link,
 .btn:visited {
     border: none;
-    font-size: 20px;
+    font-size: 2rem;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     font-family: inherit;
 
     border-radius: 20px;
-    padding: 16px 32px;
+    padding: 1.6rem 3.2rem;
     background-color: #0b7285;
     color: #fff !important;
     font-weight: 700;

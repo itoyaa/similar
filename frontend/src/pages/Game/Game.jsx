@@ -113,6 +113,7 @@ export const Game = () => {
                     .then((similarity) => {
                         if (similarity === 100) {
                             setAnswer(formatNewWord);
+                            setOpenVictory(true);
                             setGameState(GameState.End);
                         } else if (similarity === -1) {
                             setShake(true);
@@ -184,9 +185,7 @@ export const Game = () => {
                     <div className={styles.menu} onClick={handleOpenMenu}>
                         <ion-icon name="ellipsis-horizontal"></ion-icon>
                     </div>
-                    <div className={styles.num} onClick={handleOpenMenu}>
-                        #{gameNum}
-                    </div>
+                    <div className={styles.num}>#{gameNum}</div>
                 </header>
                 <InputArea
                     onClick={addNewWord}

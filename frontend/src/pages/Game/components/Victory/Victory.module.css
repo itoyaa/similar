@@ -11,12 +11,12 @@
 }
 
 .box {
-    min-width: 300px;
-    max-width: 540px;
+    min-width: 30rem;
+    max-width: 54rem;
     width: 90%;
     background-color: #fff;
     border-radius: 20px;
-    padding: 32px 64px 64px;
+    padding: 3.2rem 6.4rem 6.4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,16 +30,16 @@
     font-weight: 700;
     position: relative;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 0.8rem;
 }
 
 .pic {
-    font-size: 120px;
+    font-size: 12rem;
 }
 
 .desc {
     font-size: 2.4rem;
-    margin-bottom: 8px;
+    margin-bottom: 0.8rem;
 }
 
 .ans {
@@ -49,8 +49,8 @@
 
 .results {
     display: flex;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 1.6rem;
+    margin-bottom: 2.4rem;
     font-size: 1.6rem;
 }
 
@@ -70,9 +70,9 @@
 
 .btn {
     position: absolute;
-    width: 48px;
-    height: 48px;
-    font-size: 48px;
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: 4.8rem;
     cursor: pointer;
     color: #15aabf;
     transition: all 0.3s;
@@ -84,14 +84,14 @@
 
 .closeBtn {
     position: absolute;
-    width: 48px;
-    height: 48px;
-    font-size: 48px;
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: 4.8rem;
     cursor: pointer;
     color: #15aabf;
     transition: all 0.3s;
-    right: 8px;
-    top: 6px;
+    right: 0.8rem;
+    top: 0.6rem;
 }
 
 .closeBtn:hover {

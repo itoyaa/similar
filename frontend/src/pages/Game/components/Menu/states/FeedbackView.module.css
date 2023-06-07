@@ -9,13 +9,13 @@
 .feedbackBox {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1.6rem;
     font-weight: 300;
     font-size: 2rem;
     line-height: 1.5;
     color: #2c2c2c;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .link {

@@ -88,7 +88,9 @@ export const Menu = (props) => {
                                 <ion-icon name="close-outline"></ion-icon>
                             </div>
 
-                            {menuState === States.Default && (
+                            {(menuState === States.Default ||
+                                menuState === States.GiveUp ||
+                                menuState === States.StartOver) && (
                                 <OptionsView
                                     onChangeState={setMenuState}
                                     header={"Меню"}
