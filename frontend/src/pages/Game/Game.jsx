@@ -203,6 +203,7 @@ export const Game = () => {
                     handleInit={handleInit}
                     handleGiveUp={handleGiveUp}
                     setOpenVictory={setOpenVictory}
+                    setHintCounter={setHintCounter}
                 />
                 {answer && gameState === GameState.End && openVictory && (
                     <Victory

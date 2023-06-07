@@ -15,6 +15,7 @@ export const HintView = (props) => {
         getHint()
             .then((hintResponse) => {
                 setHint(hintResponse);
+                props.setHintCounter(prev => prev + 1);
             })
             .catch((e) => {
                 console.error(e);
@@ -23,7 +24,7 @@ export const HintView = (props) => {
                     message: "😥 Что-то пошло не так",
                 });
             });
-    }, []);
+    }, [props]);
 
     return (
         <>

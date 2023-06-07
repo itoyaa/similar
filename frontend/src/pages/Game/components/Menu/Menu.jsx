@@ -113,6 +113,7 @@ export const Menu = (props) => {
                                 <HintView
                                     header={"Подсказка"}
                                     onMenuClose={onMenuClose}
+                                    setHintCounter={props.setHintCounter}
                                 />
                             )}
                         </div>
