@@ -5,7 +5,7 @@ export const showNotification = ({ message }) => {
     elements.forEach((element) => element.remove());
 
     let notification = document.createElement("div");
-    notification.style.top = "-30px";
+    notification.style.top = "-100px";
     notification.style.left = "50%";
     notification.style.position = "fixed";
     notification.style.zIndex = "1000";
@@ -16,7 +16,7 @@ export const showNotification = ({ message }) => {
 
     setTimeout(() => {
         notification.style.top = "10px";
-    }, 10);
+    }, 50);
 
     document.body.append(notification);
     setTimeout(() => notification.remove(), 2000);
