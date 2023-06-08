@@ -107,7 +107,7 @@ export const Game = () => {
 
     const addNewWord = React.useCallback(
         (newWord) => {
-            const formatNewWord = newWord.toLowerCase();
+            const formatNewWord = newWord.toLowerCase().trim();
             if (!wordList.map((word) => word.word).includes(formatNewWord)) {
                 getWordSimilarity(formatNewWord)
                     .then((similarity) => {
