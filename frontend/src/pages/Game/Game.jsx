@@ -103,7 +103,7 @@ export const Game = () => {
         }
         localStorage.setItem("gameNum", JSON.stringify(num));
         return num;
-    }, [handleInit]);
+    }, [handleInit, window.location.href]);
 
     const addNewWord = React.useCallback(
         (newWord) => {
