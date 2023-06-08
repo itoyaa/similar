@@ -2,7 +2,7 @@ import pandas as pd
 import random
 
 ANSWER = pd.read_csv(
-    './words.csv', index_col='Unnamed: 0')
+    '/home/itoya/similar/backend/similar/backend_api/words.csv', index_col='Unnamed: 0')
 POSSIBLE_WORDS = set(ANSWER.index)
 
 

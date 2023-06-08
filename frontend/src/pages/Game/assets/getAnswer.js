@@ -7,7 +7,7 @@ export async function getAnswer() {
         const gameNum = arrayUrl[arrayUrl.length - 1];
 
         const response = await axios.get(
-            `http://127.0.0.1:8000/answer/?gameNum=${gameNum}`
+            `http://51.250.31.5:8000/answer/?gameNum=${gameNum}`
         );
         const { data } = response;
         return data[0].answer;
