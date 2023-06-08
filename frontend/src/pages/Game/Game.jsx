@@ -133,7 +133,7 @@ export const Game = () => {
                                 return [
                                     ...prev,
                                     {
-                                        word: formatNewWord,
+                                        word: formatNewWord.trim(),
                                         similarity:
                                             Math.round(
                                                 correntSimilarity * 10000
